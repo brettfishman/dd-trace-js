@@ -7,7 +7,7 @@ describe('Plugin', () => {
       modName: 'fastify',
       repoUrl: 'fastify/fastify',
       commitish: 'latest',
-      testCmd: 'tap -J test/*.test.js test/*/*.test.js'
+      testCmd: 'node_modules/.bin/tap -J test/*.test.js test/*/*.test.js'
     })
   })
 })

@@ -3,6 +3,6 @@ const suiteTest = require('../../dd-trace/test/plugins/suite')
 
 describe('Plugin', () => {
   describe('couchbase test suite', () => {
-    suiteTest('couchbase', 'trentm/node-bunyan', 'latest')
+    suiteTest('couchbase', 'trentm/node-bunyan', 'v3.1.2')
   })
 })

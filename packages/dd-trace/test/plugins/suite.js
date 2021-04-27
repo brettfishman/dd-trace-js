@@ -20,6 +20,7 @@ async function getLatest (modName, repoUrl) {
   const { stdout } = await exec(`npm view ${modName} dist-tags --json`)
   const { latest } = JSON.parse(stdout)
   const tags = await get(`https://api.github.com/repos/${repoUrl}/git/refs/tags`)
+  console.log(latest, tags.map(t => t.ref.replace(/refs\/tags\//, '')).join(' '))
   for (const tag of tags) {
     if (tag.ref.includes(latest)) {
       return tag.ref.split('/').pop()
